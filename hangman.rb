@@ -15,9 +15,9 @@ end
 
 
 
-words=["JOSH","SOFTWARE","PIZZA","PASTA"]
+words=["JOSH","SOFTWARE","PIZZA","PASTA","LAPTOP","MOBILE","SCHOOL","BOTTEL","BUS","CAT","QUEASTION","PROGRAMMER","KING"]
 curr_word = words[rand(words.length)]
-puts curr_word
+#puts curr_word
 count=5
 new_word=""
 letters_enter=""
@@ -28,6 +28,10 @@ end
 #puts new_word
 while (new_word!=curr_word and count!=0) do
 	puts "You have #{count} chance"
+	for i in 0..new_word.length do 
+		print " #{new_word[i]}" 
+	end
+			puts"\n\n"
 	puts "Enter any latter"
 	l=gets.chomp.upcase
 	puts l
@@ -42,19 +46,24 @@ while (new_word!=curr_word and count!=0) do
 			index_all.each do|a| 
 				new_word[a]=l
 			end
-			for i in 0..new_word.length do 
-			 	print " #{new_word[i]}" 
-			end
-			puts"\n\n"
+			
 		else
 			count-=1
 		end
 	end
+	
 	if(count==0)
-		puts "\n\n****YOU LOOS!!!****\n\n"
+		for i in 0..new_word.length do 
+			print " #{new_word[i]}" 
+		end
+		puts "\n\n****YOU LOOS!!!****\n\nword is :#{curr_word}\n\n"
+
 	end
 	
 	if(new_word==curr_word)
+		for i in 0..new_word.length do 
+			print " #{new_word[i]}" 
+		end
 		puts "\n\n****YOU WON!!!****\n\n"
 	end
 end

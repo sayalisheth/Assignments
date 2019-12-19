@@ -4,16 +4,16 @@ class Student
 	attr_accessor :roll_no
 	attr_accessor :age
 
-	@@count=0
-   def initialize(n,a)
-   	 @@count+=1
-     puts "Obj created"
-     @name=n
-     @roll_no=@@count
-     @age=a
-    end
+	@@count = 0
+  def initialize(n,a)
+   	@@count += 1
+    puts "Object is created"
+    @name = n
+    @roll_no = @@count
+    @age = a
+   end
 
-def self.class_methd
+def self.total_student_count
 	puts "Total no of students : #{@@count}"
 end
 
@@ -33,18 +33,18 @@ def show_age
 end
 
 end
-s1=Student.new("Sayali",23)
+s1 = Student.new("Sayali", 23)
 s1.show_name
 s1.show_rollno
 s1.show_age
 
 
-s3=Student.new("Kajal",23)
-s3.show_name
-s3.show_rollno
-s3.show_age
+s2 = Student.new("Kajal", 23)
+s2.show_name
+s2.show_rollno
+s2.show_age
 
 
-Student.class_methd
+Student.total_student_count
 
 

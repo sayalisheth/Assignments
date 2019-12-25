@@ -2,7 +2,6 @@ chances = 5
 stages = 0
 words=["JOSH", "SOFTWARE", "PIZZA", "PASTA", "LAPTOP", "MOBILE", "SCHOOL", "BOTTEL", "BUS", "CAT", "QUESTION", "PROGRAMMER", "KING"]
 
-
 def find_index(word, character)
   index = 0
 	all_index = []
@@ -46,7 +45,7 @@ def check_word(curr_word, chances)
 			if curr_word.include? letter
 
 				index_all = find_index(curr_word, letter)
-				index_all.each do|a| 
+				index_all.each do |a| 
 					new_word[a] = letter
 				end
 				
@@ -65,16 +64,14 @@ def check_word(curr_word, chances)
 			print_new_word(new_word)
 			puts "\n\n****Your Guess is Correct!!!****\n\n"
 		end
-		end
+	end
 		chances
 end
 
 while(stages < 5)
 	stages += 1 
 	puts "stage : #{stages}"
-
 	curr_word = words[rand(words.length)]
-	
 	chances = check_word(curr_word, chances)
 end		
 
